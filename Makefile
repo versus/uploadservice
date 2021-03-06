@@ -7,8 +7,10 @@ run:
 build:
 	./gradlew bootJar
 
-.PHONY: compose
-compose:
-	docker-compose up --build
+.PHONY: docker-build
+docker-build:
+	docker build -f Dockerfile -t versus/upload:latest .
 
-
+.PHONY: docker-run
+docker-run:
+	docker-compose -f docker-compose.yml up --build
