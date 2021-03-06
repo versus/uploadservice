@@ -72,6 +72,6 @@ make docker-run
 ### Issues
 Please open *issues* here: [New Issue](https://github.com/versus/uploadservice/issues)
 
-###Suggestions and improvements are welcome.
+### Suggestions and improvements are welcome.
 
 -Valentyn Nastenko(c 2021) https://github.com/versus
