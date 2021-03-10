@@ -1,14 +1,17 @@
 package com.bastionz.Upload.Services;
 
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+
 
 @Service
 public class FileService {
@@ -23,7 +26,7 @@ public class FileService {
                 e.printStackTrace();
             }
         }
-        Path destination = Paths.get(storageDirectory.toString() + "/" + fileName);
+        Path destination = Paths.get(storageDirectory.toString() + "/" + FilenameUtils.getName(fileName));
         try {
             Files.copy(file.getInputStream(), destination, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
