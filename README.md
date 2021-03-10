@@ -13,7 +13,7 @@
 ```bash
 git clone https://github.com/versus/uploadservice.git
 cd uploadservice
-make compose
+make docker-run
 ```
 * waiting for start the service
 ```bash
